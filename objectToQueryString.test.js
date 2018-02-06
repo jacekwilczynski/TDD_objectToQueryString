@@ -46,7 +46,8 @@ describe('objectToQueryString', function() {
   );
 
   test(
-    'given a value whose typeof !== "object", throws an error',
+    'given a value for whom typeof is other than ' +
+    '"object" or "undefined", throws an error',
     function() {
       expect(() => objectToQueryString('a')).toThrow();
       expect(() => objectToQueryString(5)).toThrow();
