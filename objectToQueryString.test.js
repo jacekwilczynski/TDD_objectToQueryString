@@ -1,12 +1,5 @@
 const objectToQueryString = require('./objectToQueryString');
 
-expect.extend({
-  toBeOfType: (received, argument) => ({
-    pass: typeof received === argument,
-    message: () => `Expected type: "${argument}", received "${received}"`
-  })
-});
-
 describe('objectToQueryString', function() {
   const proto = {
     inheritedProperty: 'abcd'
